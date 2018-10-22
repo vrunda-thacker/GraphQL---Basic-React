@@ -25,7 +25,7 @@ class SongList extends Component {
     return this.props.data && this.props.data.songs && this.props.data.songs.map(({ id, title }) => {
       return (
         <li key={id} className='collection-item'>
-          { title }
+          <Link to={`/songs/${id}`}>{ title }</Link>
           <button className='btn-floatin btn-small red right' onClick={() => this.deleteSong(id)}>Delete</button>
         </li>
       );
